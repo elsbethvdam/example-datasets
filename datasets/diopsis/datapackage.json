@@ -1,0 +1,136 @@
+{
+    "resources": [
+        {
+            "name": "deployments",
+            "path": "deployments.csv",
+            "profile": "tabular-data-resource",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": "https://raw.githubusercontent.com/tdwg/camtrap-dp/1.0/deployments-table-schema.json"
+        },
+        {
+            "name": "media",
+            "path": "media.csv",
+            "profile": "tabular-data-resource",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": "https://raw.githubusercontent.com/tdwg/camtrap-dp/1.0/media-table-schema.json"
+        },
+        {
+            "name": "observations",
+            "path": "observations.csv",
+            "profile": "tabular-data-resource",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": "https://raw.githubusercontent.com/tdwg/camtrap-dp/1.0/observations-table-schema.json"
+        }
+    ],
+    "name": "Diopsis Example Dataset",
+    "created": "2026-04-21T08:05:31.079302+00:00",
+    "description": "A subset of Diopsis recordings and annotations used in following study: <br/> Effects of pressure drainage on invertebrate and plant diversity in the Alblasserwaard. <br/>November 2025. By Youri Siemer, Naturalis Biodiversity Center",
+    "contributors": [
+        {
+            "title": "Elsbeth van Dam (Naturalis Biodiversity Center)",
+            "role": "contact"
+        }
+    ],
+    "licenses": [
+        {
+            "scope": "media",
+            "name": "CC-BY-4.0",
+            "path": "https://creativecommons.org/licenses/by/4.0/",
+            "title": "Creative Commons Attribution 4.0 International"
+        }
+    ],
+    "project": {
+        "title": "Diopsis example dataset",
+        "samplingDesign": "experimental",
+        "captureMethod": "activityDetection",
+        "individualAnimals": false,
+        "observationLevel": "media"
+    },
+    "spatial": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [4.650, 51.840],
+                [4.880, 51.820],
+                [4.980, 51.830],
+                [4.950, 51.940],
+                [4.800, 51.960],
+                [4.650, 51.840]
+            ]
+        ]
+    },
+    "temporal": {
+        "start": "2025-06-10",
+        "end": "2025-08-19"
+    },
+    "taxonomic": [
+        {
+            "scientificName": "Aphididae"
+        },
+        {
+            "scientificName": "Auchenorrhyncha indet."
+        },
+        {
+            "scientificName": "Caenidae"
+        },
+        {
+            "scientificName": "Chironomidae"
+        },
+        {
+            "scientificName": "Cicadellidae"
+        },
+        {
+            "scientificName": "Coleoptera"
+        },
+        {
+            "scientificName": "Crambidae"
+        },
+        {
+            "scientificName": "Diptera"
+        },
+        {
+            "scientificName": "Ephemeroptera"
+        },
+        {
+            "scientificName": "Formicidae"
+        },
+        {
+            "scientificName": "Geometridae"
+        },
+        {
+            "scientificName": "Hydroptilidae"
+        },
+        {
+            "scientificName": "Hymenoptera"
+        },
+        {
+            "scientificName": "Insecta"
+        },
+        {
+            "scientificName": "Lepidoptera"
+        },
+        {
+            "scientificName": "Limoniidae"
+        },
+        {
+            "scientificName": "Miridae"
+        },
+        {
+            "scientificName": "Plutellidae"
+        },
+        {
+            "scientificName": "Staphylinidae"
+        },
+        {
+            "scientificName": "Tortricidae"
+        }
+    ]
+}
+
+

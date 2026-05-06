@@ -7,7 +7,7 @@ import os
 
 # --- Configuration --- 
 RAW_DATA_DIR = "./datasets/diopsis/raw-data"
-OUTPUT_DIR = "./datasets/diopsis/code/gemini/camtrap-data"
+OUTPUT_DIR = "./datasets/diopsis/"
 
 DATA_INFILTRATIE_PATH = os.path.join(RAW_DATA_DIR, "data_infiltratie_c231_2025.csv")
 IMAGE_MAPPING_PATH = os.path.join(RAW_DATA_DIR, "image_id_to_file_mapping.csv")
@@ -49,13 +49,16 @@ def generate_deployments(df_merged):
         deployment_id = f"{sensor_name}_{deployment_name.replace(' ', '_')}"
         deployment_start = group['capture_on'].min().isoformat()
         deployment_end = group['capture_on'].max().isoformat()
+        print(f'deployment_start: {deployment_start}')
+        print(f'deployment_end: {deployment_end}')
 
         deployments.append({
             'deploymentID': deployment_id,
             'locationID': deployment_name, # Confirmed unique by user
             'locationName': deployment_name,
-            'latitude': None, # To be determined by user
-            'longitude': None, # To be determined by user
+            'latitude': 51.879, # To be determined by user
+            'longitude': 4.821, # To be determined by user
+            'coordinateUncertainty': 25000, # in meters
             'deploymentStart': deployment_start,
             'deploymentEnd': deployment_end,
             'cameraID': sensor_name,
@@ -93,7 +96,8 @@ def generate_media(df_merged):
             'deploymentID': deployment_id,
             'captureMethod': 'activityDetection',
             'timestamp': row['capture_on'].isoformat(),
-            'filePath': f"camtrap-data/images/{file_name}", # Relative path
+            'filePath': f"media/{file_name}", # Relative path
+            'filePublic': True,
             'fileName': file_name,
             'fileMediatype': 'image/jpeg',
             'mediaComments': None
